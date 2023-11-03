@@ -8,12 +8,12 @@ describe('Verify the Imagemagick Configuration recipe applied.', () => {
   })
   it('Verify Imagemagick quality is set to 100.', () => {
     cy.login()
-    //cy.visit('imagemagick.settings')
-    //cy.get('#edit-quality').should('have.value', '100')
+    cy.visit('/admin/config/media/image-toolkit')
+    cy.get('#edit-imagemagick-quality').contains('100')
   })
   it('Verify Imagemagick is set as the default image toolkit.', () => {
     cy.login()
-    //cy.visit('system.image')
-    //cy.get('toolkit').should('contain', 'imagemagick')
+    cy.visit('/admin/config/media/image-toolkit')
+    cy.get('#edit-image-toolkit-imagemagick').should('be.checked')
   })
 })
