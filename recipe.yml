@@ -14,3 +14,7 @@ config:
     system.image:
       simple_config_update:
         toolkit: imagemagick
+    # Set the quality to 100 from the default 75.
+    imagemagick.settings:
+      simple_config_update:
+        quality: 100
