@@ -1,0 +1,16 @@
+name: 'Imagemagick Configuration'
+description: 'Installs and configures Imagemagick for Drupal.'
+type: 'Site'
+
+install:
+  - imagemagick
+config:
+  import:
+    imagemagick: "*"
+    file_mdm: "*"
+    sophron: "*"
+  actions:
+    # Update system's image toolkit to imagemagick from the default gd.
+    system.image:
+      simple_config_update:
+        toolkit: imagemagick

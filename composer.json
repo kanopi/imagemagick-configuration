@@ -1,0 +1,25 @@
+{
+    "name": "kanopi/imagemagick-configuration",
+    "description": "Installs and configures Imagemagick for Drupal.",
+    "keywords": ["recipe", "Drupal recipes", "drupal recipe"],
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Jim Birch",
+            "role": "Maintainer"
+        }
+    ],
+    "require": {
+        "drupal/imagemagick": "*"
+    },
+    "scripts": {
+        "move-tests": "rsync -az --delete web/recipes/contrib/imagemagick-configuration/imagemagick-configuration.cy.js tests/cypress/cypress/e2e/*; echo 'Moved Cypress tests to appropriate directory.' ",
+        "post-install-cmd": [
+            "@move-tests"
+        ],
+        "post-update-cmd": [
+            "@move-tests"
+        ],
+    },
+}
