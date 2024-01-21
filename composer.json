@@ -12,14 +12,5 @@
     ],
     "require": {
         "drupal/imagemagick": "*"
-    },
-    "scripts": {
-        "move-tests": "rsync -az --delete web/recipes/contrib/imagemagick-configuration/imagemagick-configuration.cy.js tests/cypress/cypress/e2e/*; echo 'Moved Cypress tests to appropriate directory.' ",
-        "post-install-cmd": [
-            "@move-tests"
-        ],
-        "post-update-cmd": [
-            "@move-tests"
-        ]
     }
 }
