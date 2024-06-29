@@ -16,5 +16,7 @@ config:
         toolkit: imagemagick
     # Set the quality to 100 from the default 75.
     imagemagick.settings:
+      ensure_exists:
+        id: imagemagick.settings
       simple_config_update:
         quality: 100
