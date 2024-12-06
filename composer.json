@@ -1,7 +1,6 @@
 {
     "name": "kanopi/imagemagick-configuration",
     "description": "Installs and configures Imagemagick for Drupal.",
-    "keywords": ["recipe", "Drupal recipes", "drupal recipe"],
     "type": "drupal-recipe",
     "license": "GPL-2.0-or-later",
     "authors": [
@@ -11,6 +10,7 @@
         }
     ],
     "require": {
-        "drupal/imagemagick": "*"
+        "drupal/core": ">=10.4",
+        "drupal/imagemagick": "^4.0"
     }
 }
