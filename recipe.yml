@@ -4,7 +4,7 @@ type: 'Site'
 install:
   - imagemagick
 config:
-strict: false
+  strict: false
   actions:
     # Update system's image toolkit to imagemagick from the default gd.
     system.image:
